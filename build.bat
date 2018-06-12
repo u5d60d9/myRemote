@@ -1,0 +1,5 @@
+cl src\main.cpp /c /GS /GL /analyze- /W3 /Gy /Zc:wchar_t /Zi /Gm- /O2 /sdl /fp:precise /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USING_V110_SDK71_" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX- /Zc:forScope /Gd /Oy- /Oi /MT /EHsc /nologo 
+rc /r /fo resource.res src\Resource.rc
+link main.obj Resource.res /OUT:"myRemote.exe" /MANIFEST /LTCG /NXCOMPAT  /DYNAMICBASE "kernel32.lib" "user32.lib" "gdi32.lib" "winspool.lib" "comdlg32.lib" "advapi32.lib" "shell32.lib" "ole32.lib" "oleaut32.lib" "uuid.lib" "odbc32.lib" "odbccp32.lib" /RELEASE /MACHINE:X86 /OPT:REF /SAFESEH /INCREMENTAL:NO  /SUBSYSTEM:WINDOWS",5.01" /MANIFESTUAC:"level='requireAdministrator' uiAccess='false'" /ManifestFile:"myRemote.exe.intermediate.manifest" /OPT:ICF /ERRORREPORT:PROMPT /NOLOGO /TLBID:1
+
+del *.obj *.pdb *.res *.manifest
